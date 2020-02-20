@@ -24,7 +24,7 @@ func getUlimit(w http.ResponseWriter, r *http.Request) {
 	log.Println("check ulimit")
 	var rLimit syscall.Rlimit
 	err := syscall.Getrlimit(syscall.RLIMIT_NOFILE, &rLimit)
-	fmt.Fprintln(w, "version : 3")
+	fmt.Fprintln(w, "version : 4")
 	if err != nil {
 		fmt.Println("Error Getting Rlimit ", err)
 	}
